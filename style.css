@@ -4,8 +4,13 @@
   --purple: #7a5c89;
   --white: #e8e3d9;
   --green: #5c8974;
-  --font-headers: Oswald;
-  --font-main: Roboto Mono;
+  --font-headers: "Oswald", sans-serif;
+  --font-main: "Roboto Mono", monospace;
+}
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
 }
 
 .nav {
@@ -17,20 +22,100 @@
 }
 
 .nav ul {
-  display: none;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 16px 20px;
+  align-items: center;
+  gap: 20px;
+  color: var(--white);
 }
 
 #burger-toggle {
   display: none;
 }
 
+.frame {
+  position: relative;
+  display: inline-block;
+  padding: 10px 14px;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 14px;
+  height: 18px;
+  border-left: 2px solid rgba(122, 92, 137, 0.6);
+  border-bottom: 2px solid rgba(122, 92, 137, 0.6);
+}
+
+.frame::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 14px;
+  height: 18px;
+  border-right: 2px solid rgba(122, 92, 137, 0.6);
+  border-bottom: 2px solid rgba(122, 92, 137, 0.6);
+}
+
+.contacts-button {
+  position: relative;
+  font-family: var(--font-headers), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  cursor: pointer;
+
+  border: none;
+  background: transparent;
+  padding: 14px 28px;
+  display: inline-block;
+
+  /* Скошений кут на 16px */
+  background:
+    linear-gradient(to bottom, #1a160f, #1a160f) padding-box,
+    linear-gradient(to bottom, var(--red), var(--red)) border-box;
+
+  border: 2px solid transparent;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,
+    100% 16px,
+    100% 100%,
+    0 100%
+  );
+
+  transition: all 0.2s ease;
+}
+
+.contacts-button:hover {
+  background: var(--red);
+  color: var(--white);
+}
+
 @media (max-width: 784px) {
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 20px;
+    position: relative;
+  }
+
   .nav label {
     display: block;
     position: relative;
     height: 25px;
     width: 30px;
     cursor: pointer;
+    z-index: 10;
   }
 
   .nav label::after,
@@ -75,20 +160,34 @@
   .nav ul {
     display: flex;
     position: fixed;
-    left: 0;
-    right: 0;
+    color: var(--white);
+    top: 0;
+    right: -100%;
+    left: auto;
+    width: 280px;
+    height: 100vh;
     background-color: var(--color-bg);
-    padding-top: 100px;
-    z-index: -1;
+    z-index: 5;
     flex-direction: column;
-    text-align: center;
-    top: -100vh;
-    bottom: 100vh;
-    transition: 0.5s;
+    align-items: center;
+    gap: 24px;
+    box-sizing: border-box;
+    padding: 0 0 32px;
+    margin: 0;
+    transition: right 0.4s ease;
+    list-style: none;
+  }
+
+  .nav ul li:first-child {
+    margin-top: auto;
+  }
+
+  .nav-bottom {
+    margin-top: auto;
+    list-style: none;
   }
 
   #burger-toggle:checked ~ ul {
-    top: 144px;
-    bottom: 0;
+    right: 0;
   }
 }
