@@ -70,32 +70,26 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+
   color: var(--red);
   cursor: pointer;
-
   border: none;
-  background: transparent;
   padding: 14px 28px;
   display: inline-block;
 
-  /* Скошений кут на 16px */
-  background:
-    linear-gradient(to bottom, #1a160f, #1a160f) padding-box,
-    linear-gradient(to bottom, var(--red), var(--red)) border-box;
-
-  border: 2px solid transparent;
-  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(
-    0 0,
-    calc(100% - 16px) 0,
-    100% 16px,
-    100% 100%,
-    0 100%
+  /* червоний трикутник у верхньому правому куті */
+  background: linear-gradient(
+    225deg,
+    var(--red) 0,
+    var(--red) 11.3px,
+    #1a160f 11.3px
   );
+
+  /* червона рамка по всьому периметру */
+  box-shadow: inset 0 0 0 2px var(--red);
 
   transition: all 0.2s ease;
 }
-
 .contacts-button:hover {
   background: var(--red);
   color: var(--white);
