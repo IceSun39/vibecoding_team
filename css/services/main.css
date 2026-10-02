@@ -19,6 +19,7 @@ main h1 {
   background-color: var(--card-bg);
   height: 122px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .line {
@@ -43,6 +44,7 @@ main h1 {
 
 .card h2 {
   padding: 16px 28px 0 28px;
+  margin-bottom: 8px;
   font-size: 18px;
   font-weight: 600;
 }
@@ -64,8 +66,19 @@ main .h2 {
   font-size: 24px;
 }
 
+main .red {
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+main .purple {
+  color: var(--purple);
+  margin: 8px 0 8px 0;
+}
+
 main p {
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 /* Кнопки */
@@ -96,8 +109,7 @@ main .make-pact {
 
 main .pricelist {
   display: block;
-  width: 100%;
-  max-width: 320px;
+  width: 85%;
   margin: 24px auto 0 auto;
   border: 1px solid var(--white);
   font-size: 14px;
