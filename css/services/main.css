@@ -1,0 +1,106 @@
+main {
+  padding: 0 32px 0 32px;
+  position: relative;
+}
+
+main .text-over-title {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 38px;
+}
+
+main h1 {
+  font-size: 39px;
+}
+
+/* Карточки арсеналу послуг */
+.card {
+  background-color: var(--card-bg);
+  height: 122px;
+  position: relative;
+}
+
+.line {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 2;
+}
+
+.red-line {
+  background-color: var(--red);
+}
+.purple-line {
+  background-color: var(--purple);
+}
+.green-line {
+  background-color: var(--green);
+}
+
+.card h2 {
+  padding: 16px 28px 0 28px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  padding: 0 28px 0 28px;
+  font-size: 14px;
+}
+
+main .section-divider {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #322b1c;
+  margin: 19px 0 14px 0;
+}
+
+main .h2 {
+  font-size: 24px;
+}
+
+main p {
+  font-size: 15px;
+}
+
+/* Кнопки */
+main .button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-family: var(--font-headers);
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+main .red-button {
+  background-color: var(--red);
+}
+main .purple-button {
+  background-color: var(--purple);
+}
+
+main .make-pact {
+  background-color: var(--red);
+  font-family: var(--font-headers);
+  font-size: 24px;
+  height: 70px;
+}
+
+main .pricelist {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 24px auto 0 auto;
+  border: 1px solid var(--white);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 16px 20px;
+  text-align: center;
+}
