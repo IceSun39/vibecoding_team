@@ -8,10 +8,13 @@ main .text-over-title {
   font-size: 14px;
   font-weight: bold;
   padding-top: 38px;
+  margin: 0;
 }
 
 main h1 {
   font-size: 39px;
+  margin-top: 0;
+  margin-bottom: 17px;
 }
 
 /* Карточки арсеналу послуг */
