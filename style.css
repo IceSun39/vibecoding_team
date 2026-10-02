@@ -1,5 +1,6 @@
 :root {
   --color-bg: #4a412a;
+  --card-bg: #322b1c;
   --red: #8b1e1e;
   --purple: #7a5c89;
   --white: #e8e3d9;
@@ -14,6 +15,7 @@ body {
   background-color: var(--color-bg);
 }
 
+/* HEADER */
 header {
   display: flex;
   position: relative;
@@ -311,4 +313,67 @@ nav ul li.active::after {
   #burger-toggle:checked ~ ul {
     right: 0;
   }
+}
+/* MAIN SECTION */
+
+main {
+  padding: 0 32px 0 32px;
+}
+
+main .text-over-title {
+  color: var(--green);
+  font-size: 14px;
+  font-family: var(--font-main);
+  padding-top: 38px;
+}
+
+main h1 {
+  color: var(--white);
+  font-size: 39px;
+  font-family: var(--font-main);
+}
+
+/* Карточка арсеналу послуг */
+
+.card {
+  background-color: var(--card-bg);
+  height: 122px;
+  position: relative;
+}
+
+.line {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 2;
+}
+
+.red-line {
+  background-color: var(--red);
+}
+
+.purple-line {
+  background-color: var(--purple);
+}
+
+.green-line {
+  background-color: var(--green);
+}
+
+.card h2 {
+  padding: 16px 28px 0 28px;
+  color: var(--white);
+  font-family: var(--font-headers);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  padding: 0 28px 0 28px;
+  color: var(--white);
+  font-family: var(--font-main);
+  font-size: 14px;
 }
