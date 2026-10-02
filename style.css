@@ -11,24 +11,89 @@
 body {
   font-family: var(--font-main);
   margin: 0;
-}
-
-.nav {
   background-color: var(--color-bg);
 }
 
-.nav label {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg);
+  padding: 16px 20px;
+}
+
+header p {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-headers);
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Робмік біля назви*/
+.logo::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--red);
+  transform: rotate(45deg);
+}
+
+nav {
+  background-color: var(--color-bg);
+}
+
+nav label {
   display: none;
 }
 
-.nav ul {
+nav ul {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 16px 20px;
+  padding: 24px 20px;
   align-items: center;
   gap: 20px;
   color: var(--white);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  left: auto;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--color-bg);
+  z-index: 5;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: right 0.4s ease;
+}
+
+nav ul::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 14px;
+  height: 18px;
+  border-left: 2px solid rgba(122, 92, 137, 0.6);
+  border-top: 2px solid rgba(122, 92, 137, 0.6);
+}
+
+nav ul::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 14px;
+  height: 18px;
+  border-right: 2px solid rgba(122, 92, 137, 0.6);
+  border-top: 2px solid rgba(122, 92, 137, 0.6);
+}
+
+nav ul li:first-child {
+  margin-top: auto;
 }
 
 #burger-toggle {
@@ -96,14 +161,16 @@ body {
 }
 
 @media (max-width: 784px) {
-  .nav {
+  nav {
     display: flex;
-    justify-content: flex-end;
-    padding: 16px 20px;
-    position: relative;
+    justify-content: flex-end; /* Повертає бургер праворуч */
+    align-items: center;
+    padding: 0;
+    position: static;
+    background: transparent;
   }
 
-  .nav label {
+  nav label {
     display: block;
     position: relative;
     height: 25px;
@@ -112,9 +179,9 @@ body {
     z-index: 10;
   }
 
-  .nav label::after,
-  .nav label::before,
-  .nav label span {
+  nav label::after,
+  nav label::before,
+  nav label span {
     position: absolute;
     width: 100%;
     height: 3px;
@@ -122,17 +189,17 @@ body {
     transition: 0.3s;
   }
 
-  .nav label::before {
+  nav label::before {
     content: "";
     top: 0;
   }
 
-  .nav label::after {
+  nav label::after {
     content: "";
     bottom: 0;
   }
 
-  .nav label span {
+  nav label span {
     top: 10px;
   }
 
@@ -151,34 +218,40 @@ body {
     top: 12px;
   }
 
-  .nav ul {
-    display: flex;
-    position: fixed;
-    color: var(--white);
-    top: 0;
-    right: -100%;
-    left: auto;
-    width: 280px;
-    height: 100vh;
-    background-color: var(--color-bg);
-    z-index: 5;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    box-sizing: border-box;
-    padding: 0 0 32px;
-    margin: 0;
-    transition: right 0.4s ease;
-    list-style: none;
-  }
-
-  .nav ul li:first-child {
-    margin-top: auto;
+  /* Додаємо заборону скролу для виїзного меню */
+  nav ul {
+    overflow: hidden;
   }
 
   .nav-bottom {
+    position: relative;
     margin-top: auto;
     list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-bottom::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -8px;
+    width: 14px;
+    height: 18px;
+    border-left: 2px solid rgba(122, 92, 137, 0.6);
+    border-bottom: 2px solid rgba(122, 92, 137, 0.6);
+  }
+
+  .nav-bottom::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    bottom: -8px;
+    width: 14px;
+    height: 18px;
+    border-right: 2px solid rgba(122, 92, 137, 0.6);
+    border-bottom: 2px solid rgba(122, 92, 137, 0.6);
   }
 
   #burger-toggle:checked ~ ul {
