@@ -16,10 +16,11 @@ body {
 
 header {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-bg);
-  padding: 16px 20px;
+  padding: 16px 32px;
 }
 
 header p {
@@ -31,6 +32,37 @@ header p {
   letter-spacing: 2px;
 }
 
+header::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  height: 1px;
+  background-color: black;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  bottom: -2.5px;
+  height: 6px;
+  width: 27px;
+  background-color: var(--red);
+  z-index: 2;
+}
+
+header .header-line-end {
+  content: "";
+  position: absolute;
+  right: 32px;
+  bottom: -5px;
+  height: 10.62px;
+  width: 1px;
+  background-color: black;
+}
+
 /* Робмік біля назви*/
 .logo::after {
   content: "";
@@ -39,6 +71,7 @@ header p {
   height: 14px;
   background-color: var(--red);
   transform: rotate(45deg);
+  margin-left: 14px;
 }
 
 nav {
@@ -77,8 +110,8 @@ nav ul::before {
   top: 16px;
   width: 14px;
   height: 18px;
-  border-left: 2px solid rgba(122, 92, 137, 0.6);
-  border-top: 2px solid rgba(122, 92, 137, 0.6);
+  border-left: 2px solid var(--purple);
+  border-top: 2px solid var(--purple);
 }
 
 nav ul::after {
@@ -88,12 +121,30 @@ nav ul::after {
   top: 16px;
   width: 14px;
   height: 18px;
-  border-right: 2px solid rgba(122, 92, 137, 0.6);
-  border-top: 2px solid rgba(122, 92, 137, 0.6);
+  border-right: 2px solid var(--purple);
+  border-top: 2px solid var(--purple);
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav ul li:first-child {
   margin-top: auto;
+}
+
+.active {
+  font-weight: bold;
+}
+
+nav ul li.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--red);
 }
 
 #burger-toggle {
@@ -113,8 +164,8 @@ nav ul li:first-child {
   bottom: 0;
   width: 14px;
   height: 18px;
-  border-left: 2px solid rgba(122, 92, 137, 0.6);
-  border-bottom: 2px solid rgba(122, 92, 137, 0.6);
+  border-left: 2px solid var(--purple);
+  border-bottom: 2px solid var(--purple);
 }
 
 .frame::after {
@@ -124,8 +175,8 @@ nav ul li:first-child {
   bottom: 0;
   width: 14px;
   height: 18px;
-  border-right: 2px solid rgba(122, 92, 137, 0.6);
-  border-bottom: 2px solid rgba(122, 92, 137, 0.6);
+  border-right: 2px solid var(--purple);
+  border-bottom: 2px solid var(--purple);
 }
 
 .contacts-button {
@@ -163,7 +214,7 @@ nav ul li:first-child {
 @media (max-width: 784px) {
   nav {
     display: flex;
-    justify-content: flex-end; /* Повертає бургер праворуч */
+    justify-content: flex-end;
     align-items: center;
     padding: 0;
     position: static;
@@ -218,7 +269,7 @@ nav ul li:first-child {
     top: 12px;
   }
 
-  /* Додаємо заборону скролу для виїзного меню */
+  /* Заборона скролу для виїзного меню */
   nav ul {
     overflow: hidden;
   }
@@ -239,8 +290,8 @@ nav ul li:first-child {
     bottom: -8px;
     width: 14px;
     height: 18px;
-    border-left: 2px solid rgba(122, 92, 137, 0.6);
-    border-bottom: 2px solid rgba(122, 92, 137, 0.6);
+    border-left: 2px solid var(--purple);
+    border-bottom: 2px solid var(--purple);
   }
 
   .nav-bottom::after {
@@ -250,8 +301,8 @@ nav ul li:first-child {
     bottom: -8px;
     width: 14px;
     height: 18px;
-    border-right: 2px solid rgba(122, 92, 137, 0.6);
-    border-bottom: 2px solid rgba(122, 92, 137, 0.6);
+    border-right: 2px solid var(--purple);
+    border-bottom: 2px solid var(--purple);
   }
 
   #burger-toggle:checked ~ ul {
