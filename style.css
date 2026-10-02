@@ -32,6 +32,7 @@ header p {
   letter-spacing: 2px;
 }
 
+/* Полоска під хедером*/
 header::after {
   content: "";
   position: absolute;
@@ -42,6 +43,7 @@ header::after {
   background-color: black;
 }
 
+/* Червона полоска зліва від головної полоски*/
 header::before {
   content: "";
   position: absolute;
@@ -53,6 +55,7 @@ header::before {
   z-index: 2;
 }
 
+/* Вертикальна полоска справа від головної*/
 header .header-line-end {
   content: "";
   position: absolute;
