@@ -368,3 +368,17 @@ nav ul li.active::after {
     display: none;
   }
 }
+
+@media (min-width: 1440px) {
+  header {
+    margin: 0 80px;
+  }
+
+  header::before {
+    margin: 0 -40px;
+  }
+
+  header::after {
+    margin: 0 -40px;
+  }
+}

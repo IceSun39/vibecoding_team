@@ -46,3 +46,17 @@ footer::after {
   border-right: 2px solid var(--purple);
   border-bottom: 2px solid var(--purple);
 }
+
+@media (min-width: 1440px) {
+  footer {
+    margin: 0 80px;
+  }
+
+  footer::before {
+    margin: 0 -40px;
+  }
+
+  footer::after {
+    margin: 0 -40px;
+  }
+}
