@@ -57,9 +57,9 @@ header::after {
   left: 32px;
   right: 32px;
   bottom: 0;
-  height: 1px;
-  background-color: #000;
-  z-index: 1;
+  height: 2px;
+  background-color: black;
+  z-index: 10;
 }
 
 /* Жирна червона лінія на початку */
@@ -71,7 +71,7 @@ header::after {
   height: 6px;
   width: 27px;
   background-color: var(--red);
-  z-index: 2;
+  z-index: 12;
 }
 
 /* Вертикальна лінія в кінці */
@@ -81,9 +81,9 @@ header::after {
   right: 32px;
   bottom: -5px;
   height: 11px;
-  width: 1px;
-  background-color: #000;
-  z-index: 2;
+  width: 2px;
+  background-color: black;
+  z-index: 12;
 }
 
 /* Куточок біля лого */
@@ -320,5 +320,51 @@ nav ul li.active::after {
 
   #burger-toggle:checked ~ ul {
     right: 0;
+  }
+}
+
+/* Десктопний вигляд меню для екранів більше 784px */
+@media (min-width: 785px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    background: transparent;
+  }
+
+  nav ul {
+    position: static;
+    width: 100%;
+    height: auto;
+    right: auto;
+    flex-direction: row;
+    padding: 0;
+    gap: 32px;
+    background-color: transparent;
+    overflow: visible;
+  }
+
+  nav ul::after {
+    display: none;
+  }
+
+  nav ul li:first-child {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .nav-bottom {
+    margin-top: 0;
+    margin-left: auto;
+    width: auto;
+  }
+
+  .nav-bottom::after {
+    display: none;
   }
 }
