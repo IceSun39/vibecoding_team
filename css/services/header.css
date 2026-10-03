@@ -1,6 +1,7 @@
 @import url(../base.css);
 @import url(../reset.css);
 
+/* Загальні налаштування заголовка та лого */
 header {
   display: flex;
   position: sticky;
@@ -18,8 +19,10 @@ header p.logo {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 /* Куточки */
 
+/* Куточок зліва */
 header::before {
   content: "";
   position: absolute;
@@ -32,6 +35,7 @@ header::before {
   pointer-events: none;
 }
 
+/* Куточок справа */
 header::after {
   content: "";
   position: absolute;
@@ -45,6 +49,8 @@ header::after {
 }
 
 /* Полоски хедера */
+
+/* Основна лінія */
 .header-main-line {
   display: block;
   position: absolute;
@@ -56,6 +62,7 @@ header::after {
   z-index: 1;
 }
 
+/* Жирна червона лінія на початку */
 .header-red-start {
   display: block;
   position: absolute;
@@ -67,6 +74,7 @@ header::after {
   z-index: 2;
 }
 
+/* Вертикальна лінія в кінці */
 .header-line-end {
   display: block;
   position: absolute;
@@ -77,6 +85,8 @@ header::after {
   background-color: #000;
   z-index: 2;
 }
+
+/* Куточок біля лого */
 .logo::after {
   content: "";
   display: inline-block;
@@ -112,6 +122,7 @@ nav ul {
   transition: right 0.4s ease;
 }
 
+/* Прибрав лівий куточок в навігаційному меню */
 /*nav ul::before {
   content: "";
   position: absolute;
@@ -123,6 +134,7 @@ nav ul {
   border-top: 2px solid var(--purple);
 }*/
 
+/* Правий куточок в навігаційному меню */
 nav ul::after {
   content: "";
   position: absolute;
@@ -160,6 +172,7 @@ nav ul li.active::after {
   display: none;
 }
 
+/* Налаштування кнопки зв'язок */
 .frame {
   position: relative;
   display: inline-block;
@@ -213,6 +226,7 @@ nav ul li.active::after {
   color: var(--white);
 }
 
+/* Налаштування мобілки */
 @media (max-width: 784px) {
   nav {
     display: flex;
@@ -280,6 +294,7 @@ nav ul li.active::after {
     justify-content: center;
   }
 
+  /* Прибрав лівий нижній куточок в навігаційному меню */
   /*  .nav-bottom::before {
     content: "";
     position: absolute;
@@ -291,11 +306,12 @@ nav ul li.active::after {
     border-bottom: 2px solid var(--purple);
   }*/
 
+  /* Правий нижній куточок в навігаційному меню */
   .nav-bottom::after {
     content: "";
     position: absolute;
     right: 12px;
-    bottom: -8px;
+    bottom: -16px;
     width: 14px;
     height: 18px;
     border-right: 2px solid var(--purple);
