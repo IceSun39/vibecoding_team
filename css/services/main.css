@@ -39,11 +39,16 @@ main h1 {
 }
 
 /* Карточки арсеналу послуг */
+.cards {
+  display: grid;
+  gap: 10px;
+}
+
 .card {
   background-color: var(--card-bg);
-  height: 122px;
+  min-height: 122px;
+  margin-bottom: 0;
   position: relative;
-  margin-bottom: 10px;
 }
 
 .line {
@@ -143,4 +148,13 @@ main .pricelist {
   color: var(--white);
   padding: 16px 20px;
   text-align: center;
+}
+
+@media (min-width: 785px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    gap: 10px 20px;
+  }
 }
