@@ -189,3 +189,9 @@ main .pricelist {
     margin: 24px auto 0 auto;
   }
 }
+
+@media (min-width: 1440px) {
+  main {
+    margin: 0 80px;
+  }
+}
