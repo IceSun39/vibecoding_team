@@ -92,6 +92,22 @@ main .section-divider {
   margin: 19px 0 14px 0;
 }
 
+/* Секція з екстренним реагуванням та аудитом безпеки */
+
+.actions {
+  display: grid;
+  gap: 10px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+}
+
+.action .button {
+  margin-top: auto;
+}
+
 /* Налаштування кольорів заголовків під карточками */
 main .h2 {
   font-size: 24px;
@@ -104,7 +120,7 @@ main .red {
 
 main .purple {
   color: var(--purple);
-  margin: 8px 0 8px 0;
+  margin: 0 0 8px 0;
 }
 
 main p {
@@ -156,5 +172,20 @@ main .pricelist {
     grid-template-rows: repeat(4, auto);
     grid-auto-flow: column;
     gap: 10px 20px;
+  }
+
+  .actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 405px;
+  }
+
+  main .make-pact {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  main .pricelist {
+    width: 40%;
+    margin: 24px auto 0 auto;
   }
 }
