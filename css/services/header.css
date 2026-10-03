@@ -3,7 +3,9 @@
 
 header {
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-bg);
@@ -16,20 +18,46 @@ header p.logo {
   font-weight: bold;
   letter-spacing: 2px;
 }
+/* Куточки */
 
-/* Полоски хедера */
+header::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  width: 14px;
+  height: 18px;
+  border-left: 2px solid var(--purple);
+  border-top: 2px solid var(--purple);
+  pointer-events: none;
+}
+
 header::after {
   content: "";
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  width: 14px;
+  height: 18px;
+  border-right: 2px solid var(--purple);
+  border-top: 2px solid var(--purple);
+  pointer-events: none;
+}
+
+/* Полоски хедера */
+.header-main-line {
+  display: block;
   position: absolute;
   left: 32px;
   right: 32px;
   bottom: 0;
   height: 1px;
-  background-color: black;
+  background-color: #000;
+  z-index: 1;
 }
 
-header::before {
-  content: "";
+.header-red-start {
+  display: block;
   position: absolute;
   left: 32px;
   bottom: -2.5px;
@@ -39,16 +67,16 @@ header::before {
   z-index: 2;
 }
 
-header .header-line-end {
-  content: "";
+.header-line-end {
+  display: block;
   position: absolute;
   right: 32px;
   bottom: -5px;
-  height: 10.62px;
+  height: 11px;
   width: 1px;
-  background-color: black;
+  background-color: #000;
+  z-index: 2;
 }
-
 .logo::after {
   content: "";
   display: inline-block;
@@ -84,22 +112,22 @@ nav ul {
   transition: right 0.4s ease;
 }
 
-nav ul::before {
+/*nav ul::before {
   content: "";
   position: absolute;
   left: 16px;
-  top: 16px;
+  top: 8px;
   width: 14px;
   height: 18px;
   border-left: 2px solid var(--purple);
   border-top: 2px solid var(--purple);
-}
+}*/
 
 nav ul::after {
   content: "";
   position: absolute;
   right: 16px;
-  top: 16px;
+  top: 8px;
   width: 14px;
   height: 18px;
   border-right: 2px solid var(--purple);
@@ -252,7 +280,7 @@ nav ul li.active::after {
     justify-content: center;
   }
 
-  .nav-bottom::before {
+  /*  .nav-bottom::before {
     content: "";
     position: absolute;
     left: 12px;
@@ -261,7 +289,7 @@ nav ul li.active::after {
     height: 18px;
     border-left: 2px solid var(--purple);
     border-bottom: 2px solid var(--purple);
-  }
+  }*/
 
   .nav-bottom::after {
     content: "";

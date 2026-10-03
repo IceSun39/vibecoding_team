@@ -21,6 +21,7 @@ h2,
   font-family: var(--font-headers);
   color: var(--white);
   font-weight: bold;
+  padding-top: 24 px; /* Будь ласка, якщо не конче треба, не чіпайте цей рядок або якщо вже змінили то скажіть мені, бо у мене тоді хедер на мобілці поїде*/
 }
 
 p {
