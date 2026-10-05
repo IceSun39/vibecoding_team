@@ -1,0 +1,135 @@
+.personnel-main {
+    .personnel-main {
+        max-width: 100%;
+        padding: 40px 40px;
+        margin: 0 auto;
+    }
+}
+
+.squad-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.squad-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.squad-subtitle {
+    color: #a09886; 
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.character-card {
+    background-color: var(--card-bg);
+    border: 1px solid #453e2d;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3 {
+    font-family: var(--font-headers);
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.card-info .role {
+    font-size: 0.8rem;
+    color: #a09886;
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.stat-label {
+    width: 60px;
+    text-transform: uppercase;
+}
+
+.bar-bg {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #221d13;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+}
+
+.bg-red {
+    background-color: var(--red);
+}
+
+.bg-purple {
+    background-color: var(--purple);
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.show-more-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.show-more {
+    border: 1px solid #a09886;
+    color: #a09886;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+    .show-more:hover {
+        background-color: #a09886;
+        color: var(--card-bg);
+    }
+@media (max-width: 768px) {
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-image-wrapper img {
+    border: none !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+    .card-image-wrapper img.img-border-red {
+        border: 1px solid var(--red) !important;
+    }
+
+    .card-image-wrapper img.img-border-purple {
+        border: 1px solid var(--purple) !important;
+    }
+
+    .card-image-wrapper img.img-border-green {
+        border: 1px solid var(--green) !important;
+    }
