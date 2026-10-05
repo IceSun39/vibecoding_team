@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\3 course\\web\\Web_it\\vibecoding_team\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\ourTrollsAndOrks\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\3 course\\web\\Web_it\\vibecoding_team\\ourTrollsAndOrks.html||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ourTrollsAndOrks.html||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\ourTrollsAndOrks\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\footer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\ourTrollsAndOrks\\footer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\ourTrollsAndOrks\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\3 course\\web\\Web_it\\vibecoding_team\\services.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:services.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.css",
+              "DocumentMoniker": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\main.css",
+              "RelativeDocumentMoniker": "css\\ourTrollsAndOrks\\main.css",
+              "ToolTip": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\main.css",
+              "RelativeToolTip": "css\\ourTrollsAndOrks\\main.css",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAwwKgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-05T14:27:39.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "header.css",
+              "DocumentMoniker": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\header.css",
+              "RelativeDocumentMoniker": "css\\ourTrollsAndOrks\\header.css",
+              "ToolTip": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\header.css",
+              "RelativeToolTip": "css\\ourTrollsAndOrks\\header.css",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAwwIABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-05T14:25:31.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "footer.css",
+              "DocumentMoniker": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\footer.css",
+              "RelativeDocumentMoniker": "css\\ourTrollsAndOrks\\footer.css",
+              "ToolTip": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\footer.css",
+              "RelativeToolTip": "css\\ourTrollsAndOrks\\footer.css",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-05T14:24:09.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ourTrollsAndOrks.html",
+              "DocumentMoniker": "D:\\3 course\\web\\Web_it\\vibecoding_team\\ourTrollsAndOrks.html",
+              "RelativeDocumentMoniker": "ourTrollsAndOrks.html",
+              "ToolTip": "D:\\3 course\\web\\Web_it\\vibecoding_team\\ourTrollsAndOrks.html",
+              "RelativeToolTip": "ourTrollsAndOrks.html",
+              "ViewState": "AgIAALUAAAAAAAAAAAAwwN4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-10-05T10:32:36.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\style.css",
+              "RelativeDocumentMoniker": "css\\ourTrollsAndOrks\\style.css",
+              "ToolTip": "D:\\3 course\\web\\Web_it\\vibecoding_team\\css\\ourTrollsAndOrks\\style.css",
+              "RelativeToolTip": "css\\ourTrollsAndOrks\\style.css",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAwwHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-05T11:16:48.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "services.html",
+              "DocumentMoniker": "D:\\3 course\\web\\Web_it\\vibecoding_team\\services.html",
+              "RelativeDocumentMoniker": "services.html",
+              "ToolTip": "D:\\3 course\\web\\Web_it\\vibecoding_team\\services.html",
+              "RelativeToolTip": "services.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-10-05T10:29:02.326Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
