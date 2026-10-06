@@ -10,14 +10,14 @@ footer {
 .left-footer {
   font-family: var(--font-main);
   font-size: 8px;
-  align-items: left;
+  text-align: left;
 }
 
 /* Текст справа */
 .right-footer {
   font-family: var(--font-main);
   font-size: 8px;
-  align-items: right;
+  text-align: right;
 }
 
 /* Лівий куточок */
