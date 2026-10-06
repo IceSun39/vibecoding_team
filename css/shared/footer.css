@@ -46,7 +46,7 @@ footer::after {
 
 @media (min-width: 1440px) {
   footer {
-    margin: 0 80px;
+    margin: 0 40px;
   }
 
   footer::before {

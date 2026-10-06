@@ -340,7 +340,7 @@ nav ul li.active::after {
 
 @media (min-width: 1440px) {
   header {
-    margin: 0 80px;
+    margin: 0 40px;
   }
 
   header::before {
