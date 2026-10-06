@@ -1,6 +1,3 @@
-@import url(../base.css);
-@import url(../reset.css);
-
 /* Градієнт на фоні */
 body .page-services::before {
   content: "";
@@ -106,6 +103,7 @@ main .section-divider {
 
 .action .button {
   margin-top: auto;
+  margin-bottom: 32px;
 }
 
 /* Налаштування кольорів заголовків під карточками */
@@ -150,7 +148,6 @@ main .purple-button {
 main .make-pact {
   background-color: var(--red);
   font-family: var(--font-headers);
-  font-size: 24px;
   height: 70px;
 }
 

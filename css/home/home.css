@@ -47,6 +47,8 @@ main {
     position: relative;
     padding: 126px 0 120px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero__content {
