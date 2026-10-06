@@ -1,6 +1,4 @@
-@import url(../base.css);
-@import url(../reset.css);
-
+/* Загальні налаштування заголовка та лого */
 header {
   display: flex;
   position: sticky;
@@ -18,6 +16,8 @@ header p.logo {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
+/* Куточки */
 
 /* Куточок зліва */
 header::before {
@@ -46,6 +46,7 @@ header::after {
 }
 
 /* Полоски хедера */
+
 /* Основна лінія */
 .header-main-line {
   display: block;
@@ -82,7 +83,7 @@ header::after {
   z-index: 12;
 }
 
-/* ромб біля лого */
+/* Куточок біля лого */
 .logo::after {
   content: "";
   display: inline-block;
@@ -91,7 +92,6 @@ header::after {
   background-color: var(--red);
   transform: rotate(45deg);
   margin-left: 14px;
-  margin-bottom: 3px;
 }
 
 nav {
@@ -119,7 +119,7 @@ nav ul {
   transition: right 0.4s ease;
 }
 
-/* Лівий куточок в навігаційному меню */
+/* Прибрав лівий куточок в навігаційному меню */
 /*nav ul::before {
   content: "";
   position: absolute;
@@ -195,7 +195,7 @@ nav ul li.active::after {
   color: var(--white);
 }
 
-/* Налаштування мобільної версії */
+/* Налаштування мобілки */
 @media (max-width: 784px) {
   nav {
     display: flex;
@@ -233,7 +233,7 @@ nav ul li.active::after {
     bottom: 0;
   }
   nav label span {
-    top: 11px;
+    top: 10px;
   }
 
   #burger-toggle:checked ~ label::after {
@@ -263,7 +263,7 @@ nav ul li.active::after {
     justify-content: center;
   }
 
-  /* Лівий нижній куточок в навігаційному меню */
+  /* Прибрав лівий нижній куточок в навігаційному меню */
   /*  .nav-bottom::before {
     content: "";
     position: absolute;
@@ -338,7 +338,6 @@ nav ul li.active::after {
   }
 }
 
-/* Десктопний вигляд меню для екранів більше 1440px */
 @media (min-width: 1440px) {
   header {
     margin: 0 80px;
