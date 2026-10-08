@@ -1,6 +1,3 @@
-@import url(../base.css);
-@import url(../reset.css);
-
 /* Загальні налаштування заголовка та лого */
 header {
   display: flex;
