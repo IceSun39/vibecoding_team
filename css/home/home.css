@@ -238,8 +238,8 @@ main {
     }
 
     .hero__actions {
-        gap: 40px;
-        flex-wrap: wrap;
+        gap: 32px;
+        flex-wrap: nowrap;
     }
 
     .btn {
