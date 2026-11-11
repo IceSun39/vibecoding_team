@@ -41,6 +41,11 @@ main h1 {
   gap: 10px;
 }
 
+.cards.is-filtering {
+  grid-template-rows: none;
+  grid-auto-flow: row;
+}
+
 .card {
   background-color: var(--card-bg);
   min-height: 122px;
@@ -78,6 +83,38 @@ main h1 {
 .card p {
   padding: 0 28px 0 28px;
   font-size: 14px;
+}
+
+.service-search {
+  display: grid;
+  gap: 8px;
+  max-width: 520px;
+  margin: 0 0 8px;
+  color: var(--white);
+  font-size: 13px;
+}
+
+.service-search input {
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--purple);
+  background: var(--card-bg);
+  color: var(--white);
+  font: inherit;
+}
+
+.service-search__count,
+.service-search__empty {
+  font-size: 13px;
+}
+
+.service-search__empty {
+  padding: 20px;
+  background: var(--card-bg);
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /* Лінія між секціями */
@@ -161,6 +198,13 @@ main .pricelist {
   color: var(--white);
   padding: 16px 20px;
   text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+main .pricelist:hover {
+  background-color: var(--white);
+  color: var(--card-bg);
 }
 
 @media (min-width: 785px) {
