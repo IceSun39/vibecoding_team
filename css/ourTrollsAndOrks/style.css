@@ -103,6 +103,10 @@
     transition: all 0.3s;
 }
 
+.character-grid[hidden] {
+    display: none;
+}
+
     .show-more:hover {
         background-color: #a09886;
         color: var(--card-bg);

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/ourTrollsAndOrks/main.css" />
     <link rel="stylesheet" href="css/shared/footer.css" />
     <link rel="stylesheet" href="css/ourTrollsAndOrks/style.css" />
+    <link rel="stylesheet" href="css/shared/interactions.css" />
   </head>
   <body>
     <header>
@@ -129,12 +130,12 @@
       </div>
     </div>
     <div class="show-more-wrapper">
-      <button type="button" class="button show-more">ПОКАЗАТИ ЩЕ</button>
+      <button type="button" class="button show-more" data-squad-toggle aria-expanded="true">ЗГОРНУТИ СКЛАД</button>
     </div>
 
     <!-- Секция Тролі -->
 <div class="squad-section">
-  <h2 class="squad-title">/// ОРКИ <span class="squad-subtitle">(ШТУРМ ТА ТАКТИКА)</span></h2>
+  <h2 class="squad-title">/// ТРОЛІ <span class="squad-subtitle">(ОХОРОНА ТА ПІДТРИМКА)</span></h2>
   
   <div class="character-grid">
     <!-- Карточка 1 -->
@@ -217,7 +218,7 @@
     </div>
   </div>
     <div class="show-more-wrapper">
-    <button type="button" class="button show-more">ПОКАЗАТИ ЩЕ</button>
+    <button type="button" class="button show-more" data-squad-toggle aria-expanded="true">ЗГОРНУТИ СКЛАД</button>
 </div>
   </div>
 </main>
@@ -225,5 +226,73 @@
   <p class="left-footer">SYS.LOC // <br />66.6°N 13.0°E</p>
   <p class="right-footer">STATUS: SECURED</p>
 </footer>
+<dialog class="contact-modal" aria-labelledby="contact-modal-title" data-contact-modal>
+  <div class="contact-modal__header">
+    <h2 class="contact-modal__title" id="contact-modal-title">ЗВОРОТНИЙ ЗВ’ЯЗОК</h2>
+    <button type="button" class="contact-modal__close" aria-label="Закрити вікно" data-close-contact>&times;</button>
+  </div>
+  <form class="contact-form" data-contact-form>
+    <label class="contact-form__field">
+      <span>Ваше ім’я</span>
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
+    <label class="contact-form__field">
+      <span>Електронна пошта</span>
+      <input type="email" name="email" autocomplete="email" required>
+    </label>
+    <label class="contact-form__field">
+      <span>Повідомлення</span>
+      <textarea name="message" rows="4" required></textarea>
+    </label>
+    <button type="submit" class="contact-form__submit">НАДІСЛАТИ</button>
+  </form>
+  <p class="contact-modal__success" data-contact-success role="status" aria-live="polite" hidden>
+    Дякуємо! Ваше повідомлення прийнято.
+  </p>
+</dialog>
+<dialog class="pact-modal" aria-labelledby="pact-modal-title" data-pact-modal>
+  <div class="pact-modal__header">
+    <h2 class="pact-modal__title" id="pact-modal-title">УКЛАСТИ ПАКТ</h2>
+    <button type="button" class="pact-modal__close" aria-label="Закрити вікно" data-close-pact>&times;</button>
+  </div>
+  <form class="pact-form" data-pact-form>
+    <label class="pact-form__field">
+      <span>Ваше ім’я</span>
+      <input type="text" name="name" autocomplete="name" required autofocus>
+    </label>
+    <label class="pact-form__field">
+      <span>Яку послугу обираєте?</span>
+      <select name="service" required>
+        <option value="" disabled selected>Оберіть послугу</option>
+        <option>ФІЗИЧНА ОХОРОНА</option>
+        <option>СИЛОВІ ПЕРЕГОВОРИ</option>
+        <option>СТЯГНЕННЯ АКТИВІВ</option>
+        <option>КРАШ-ТЕСТ ОХОРОНИ</option>
+        <option>ЗАЧИСТКА ТЕРИТОРІЙ</option>
+        <option>АНТИРЕЙДЕРСЬКИЙ ПРОТОКОЛ</option>
+        <option>ОХОРОНА ПЕРИМЕТРУ</option>
+        <option>ПСИХОЛОГІЧНИЙ ТИСК</option>
+        <option>ГАРНІЗОННА ОХОРОНА</option>
+        <option>СУПРОВІД ВАНТАЖІВ</option>
+        <option>ГЛУХЕ БЛОКУВАННЯ</option>
+        <option>ОХОРОНА ЗАХОДІВ</option>
+      </select>
+    </label>
+    <label class="pact-form__field">
+      <span>Кількість орків</span>
+      <input type="number" name="orcs" min="0" step="1" required>
+    </label>
+    <label class="pact-form__field">
+      <span>Кількість тролів</span>
+      <input type="number" name="trolls" min="0" step="1" required>
+    </label>
+    <button type="submit" class="pact-form__submit">ПІДПИСАТИ ПАКТ</button>
+  </form>
+  <p class="pact-modal__success" role="status" aria-live="polite" hidden>
+    Пакт укладено! Наші орки вже готові стати на варту.
+  </p>
+</dialog>
+<script src="js/home/pact-modal.js" defer></script>
+<script src="js/shared/site-interactions.js" defer></script>
   </body>
 </html>
