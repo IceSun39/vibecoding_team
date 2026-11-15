@@ -1,0 +1,18 @@
+.typewriter__cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    margin-left: 0.1em;
+    background-color: currentColor;
+    vertical-align: text-bottom;
+    animation: typewriter-blink 1s steps(1) infinite;
+}
+
+.typewriter__cursor.is-typing {
+    animation: none;
+}
+
+@keyframes typewriter-blink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+}

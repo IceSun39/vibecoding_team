@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/shared/header.css" />
     <link rel="stylesheet" href="css/services/main.css" />
     <link rel="stylesheet" href="css/shared/interactions.css" />
+    <link rel="stylesheet" href="css/shared/typewriter.css" />
     <link rel="stylesheet" href="css/shared/footer.css" />
   </head>
   <body>
@@ -41,7 +42,7 @@
     </header>
     <main>
       <p class="text-over-title">Оперативний каталог</p>
-      <h1>АРСЕНАЛ ПОСЛУГ</h1>
+      <h1 data-typewriter data-typewriter-speed="60">АРСЕНАЛ ПОСЛУГ</h1>
       <label class="service-search">
         <span>Пошук послуги</span>
         <input type="search" data-service-search placeholder="Наприклад, охорона">
@@ -157,7 +158,7 @@
       </button>
     </main>
     <footer>
-      <p class="left-footer">SYS.LOC // <br />66.6°N 13.0°E</p>
+      <p class="left-footer" data-typewriter data-typewriter-speed="40" data-typewriter-delay="300">SYS.LOC // <br />66.6°N 13.0°E</p>
       <p class="right-footer">STATUS: SECURED</p>
     </footer>
     <dialog class="contact-modal" aria-labelledby="contact-modal-title" data-contact-modal>
@@ -228,5 +229,6 @@
     </dialog>
     <script src="js/home/pact-modal.js" defer></script>
     <script src="js/shared/site-interactions.js" defer></script>
+<script src="js/shared/typewriter.js" defer></script>
   </body>
 </html>
