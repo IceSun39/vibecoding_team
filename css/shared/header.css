@@ -147,6 +147,46 @@ nav ul li {
   position: relative;
 }
 
+nav ul li > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav ul li[class^="section-"] > a::before {
+  content: "";
+  display: block;
+  flex: 0 0 40px;
+  height: 40px;
+  background-color: var(--section-color);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.section-home > a::before {
+  -webkit-mask-image: url("images/nav-fortress.png");
+  mask-image: url("images/nav-fortress.png");
+}
+
+.section-about > a::before {
+  -webkit-mask-image: url("images/nav-flag.png");
+  mask-image: url("images/nav-flag.png");
+}
+
+.section-services > a::before {
+  -webkit-mask-image: url("images/nav-axes.png");
+  mask-image: url("images/nav-axes.png");
+}
+
+.section-personnel > a::before {
+  -webkit-mask-image: url("images/nav-helmet.png");
+  mask-image: url("images/nav-helmet.png");
+}
+
 nav ul li:first-child {
   margin-top: auto;
 }
@@ -162,7 +202,12 @@ nav ul li.active::after {
   bottom: -4px;
   width: 100%;
   height: 3px;
-  background-color: var(--red);
+  background-color: var(--section-color, var(--red));
+}
+
+nav ul li > a:focus-visible {
+  outline: 2px solid var(--section-color, var(--white));
+  outline-offset: 4px;
 }
 
 #burger-toggle {
@@ -335,6 +380,36 @@ nav ul li.active::after {
 
   .nav-bottom::after {
     display: none;
+  }
+}
+
+@media (min-width: 785px) and (max-width: 1024px) {
+  header {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  header p.logo {
+    font-size: 20px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  nav ul li > a {
+    gap: 5px;
+    font-size: 12px;
+  }
+
+  nav ul li[class^="section-"] > a::before {
+    flex-basis: 30px;
+    height: 30px;
+  }
+
+  .contacts-button {
+    padding: 10px 14px;
+    font-size: 0.9rem;
   }
 }
 

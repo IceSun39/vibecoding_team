@@ -35,12 +35,6 @@ main {
 }
 
 .hero__subtitle {
-    display: block;
-    font-family: var(--font-main);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--purple);
     margin-bottom: 8px;
 }
 

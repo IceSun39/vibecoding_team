@@ -29,13 +29,6 @@ main {
     position: relative;
 }
 
-main .text-over-title {
-    color: var(--purple);
-    font-size: 14px;
-    padding-top: 38px;
-    margin: 0;
-}
-
 main h1 {
     font-size: 39px;
     line-height: 1.35;
@@ -174,6 +167,7 @@ main h1 {
     
     main .text-over-title {
         grid-area: label;
+        justify-self: start;
     }
 
     main h1 {

@@ -5,9 +5,34 @@
   --purple: #7a5c89;
   --white: #e8e3d9;
   --green: #5c8974;
+  --amber: #c9a24a;
   
   --font-headers: "Oswald", sans-serif;
   --font-main: "Roboto Mono", monospace;
+}
+
+body[data-section="home"],
+nav li.section-home {
+  --section-color: var(--red);
+  --section-label-color: #ff9999;
+}
+
+body[data-section="about"],
+nav li.section-about {
+  --section-color: var(--purple);
+  --section-label-color: #d9b8e8;
+}
+
+body[data-section="services"],
+nav li.section-services {
+  --section-color: var(--green);
+  --section-label-color: #9ce0bd;
+}
+
+body[data-section="personnel"],
+nav li.section-personnel {
+  --section-color: var(--amber);
+  --section-label-color: #f3d37e;
 }
 
 body {
@@ -33,4 +58,33 @@ h2,
 
 p {
   font-family: var(--font-main);
+}
+
+.text-over-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--section-color, var(--red));
+  border-left-width: 4px;
+  background-color: var(--card-bg);
+  color: var(--section-label-color, var(--white));
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.text-over-title::before {
+  content: "";
+  flex: 0 0 9px;
+  height: 9px;
+  background-color: var(--section-color, var(--red));
+  box-shadow: 0 0 8px var(--section-color, var(--red));
+  transform: rotate(45deg);
+}
+
+body[data-section]:not([data-section="home"]) main .text-over-title {
+  margin: 38px 0 0;
 }
