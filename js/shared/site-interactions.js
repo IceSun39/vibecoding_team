@@ -1,3 +1,66 @@
+const activeTextGlitches = new WeakSet();
+const glitchCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
+
+document.addEventListener("pointerover", (event) => {
+    if (
+        event.pointerType === "touch" ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        !(event.target instanceof Element)
+    ) {
+        return;
+    }
+
+    const target = event.target.closest("button, nav li > a");
+    if (
+        !target ||
+        target.matches("button:disabled") ||
+        activeTextGlitches.has(target) ||
+        (event.relatedTarget instanceof Node && target.contains(event.relatedTarget))
+    ) {
+        return;
+    }
+
+    const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) {
+        const node = walker.currentNode;
+        if (/[A-Za-zА-Яа-яЁёІіЇїЄєҐґ]/.test(node.data)) {
+            textNodes.push({ node, original: node.data, current: node.data });
+        }
+    }
+
+    if (!textNodes.length) {
+        return;
+    }
+
+    activeTextGlitches.add(target);
+    let frame = 0;
+    const intervalId = window.setInterval(() => {
+        frame += 1;
+        textNodes.forEach((textNode) => {
+            if (textNode.node.data !== textNode.current) {
+                return;
+            }
+
+            textNode.current = textNode.original.replace(/[A-Za-zА-Яа-яЁёІіЇїЄєҐґ]/g, (character) => {
+                const replacement = glitchCharacters[Math.floor(Math.random() * glitchCharacters.length)];
+                return character === character.toUpperCase() ? replacement : replacement.toLowerCase();
+            });
+            textNode.node.data = textNode.current;
+        });
+
+        if (frame === 5) {
+            window.clearInterval(intervalId);
+            textNodes.forEach((textNode) => {
+                if (textNode.node.data === textNode.current) {
+                    textNode.node.data = textNode.original;
+                }
+            });
+            activeTextGlitches.delete(target);
+        }
+    }, 50);
+});
+
 const menuToggle = document.querySelector("#burger-toggle");
 
 document.querySelectorAll("nav a").forEach((link) => {
