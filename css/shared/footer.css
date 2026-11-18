@@ -57,3 +57,46 @@ footer::after {
     margin: 0 -40px;
   }
 }
+
+.right-footer {
+  --alert-red: #ff5252;
+  text-align: right;
+}
+
+.live-status__line,
+.live-status__uptime {
+  display: block;
+}
+
+.live-status__uptime {
+  margin-top: 4px;
+  opacity: 0.75;
+  font-variant-numeric: tabular-nums;
+}
+
+.live-status__value::after {
+  content: "_";
+  animation: status-cursor 1s steps(1) infinite;
+}
+
+.right-footer.is-threat .live-status__line {
+  color: var(--alert-red);
+  font-weight: 700;
+  text-shadow: 0 0 6px rgb(255 82 82 / 60%);
+  animation: status-alarm 0.4s steps(1) 5;
+}
+
+@keyframes status-cursor {
+  50% { opacity: 0; }
+}
+
+@keyframes status-alarm {
+  50% { opacity: 0.4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-status__value::after,
+  .right-footer.is-threat .live-status__line {
+    animation: none;
+  }
+}
