@@ -5,8 +5,6 @@
     if (reduceMotion || !targets.length) {
         return;
     }
-
-    // Збираємо символи елемента; <br> перетворюємо на маркер переносу рядка.
     function collectTokens(el) {
         const tokens = [];
 
@@ -18,7 +16,6 @@
             }
         });
 
-        // Прибираємо пробіли на початку/кінці та навколо переносів.
         const cleaned = [];
         tokens.forEach((token, i) => {
             const prev = cleaned[cleaned.length - 1];
@@ -38,7 +35,6 @@
 
         if (!tokens.length) return;
 
-        // Резервуємо висоту, щоб сторінка не «стрибала» під час друку.
         el.style.minHeight = el.offsetHeight + "px";
         el.setAttribute("aria-label", tokens.join("").replace(/\n/g, " "));
 
@@ -68,7 +64,6 @@
         setTimeout(type, delay);
     }
 
-    // Чекаємо шрифти, щоб виміряна висота була правильною.
     const ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
     ready.then(() => targets.forEach(setup));
 })();
