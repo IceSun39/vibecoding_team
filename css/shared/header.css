@@ -119,17 +119,6 @@ nav ul {
   transition: right 0.4s ease;
 }
 
-/* Прибрав лівий куточок в навігаційному меню */
-/*nav ul::before {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 8px;
-  width: 14px;
-  height: 18px;
-  border-left: 2px solid var(--purple);
-  border-top: 2px solid var(--purple);
-}*/
 
 /* Правий куточок в навігаційному меню */
 nav ul::after {
@@ -145,6 +134,8 @@ nav ul::after {
 
 nav ul li {
   position: relative;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 nav ul li > a {
@@ -308,18 +299,6 @@ nav ul li > a:focus-visible {
     justify-content: center;
   }
 
-  /* Прибрав лівий нижній куточок в навігаційному меню */
-  /*  .nav-bottom::before {
-    content: "";
-    position: absolute;
-    left: 12px;
-    bottom: -8px;
-    width: 14px;
-    height: 18px;
-    border-left: 2px solid var(--purple);
-    border-bottom: 2px solid var(--purple);
-  }*/
-
   /* Правий нижній куточок в навігаційному меню */
   .nav-bottom::after {
     content: "";
@@ -358,7 +337,7 @@ nav ul li > a:focus-visible {
     right: auto;
     flex-direction: row;
     padding: 0;
-    gap: 32px;
+    gap: 48px;
     background-color: transparent;
     overflow: visible;
   }
@@ -394,7 +373,12 @@ nav ul li > a:focus-visible {
   }
 
   nav ul {
-    gap: 12px;
+    gap: 24px;
+  }
+
+  nav ul li.section-personnel {
+    flex-shrink: 1;
+    white-space: normal;
   }
 
   nav ul li > a {
